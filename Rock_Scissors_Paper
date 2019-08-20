@@ -1,0 +1,18 @@
+import random
+
+while True:
+    usr_input_tmp=input("User choice: 1.Scissors 2.Rock 3.Paper 4.Quit: ")
+    usr_input=usr_input_tmp.lower()
+    cmp_input=random.choice( ['scissors', 'rock', 'paper'] )
+    print("Computer Choice : " + cmp_input)
+    if usr_input != "quit":
+        if usr_input==cmp_input:
+            print ("Same Pinch! Please enter your choice again")
+            
+        elif (usr_input == "scissors" and cmp_input =="rock") or (usr_input == "rock" and cmp_input =="paper") or (usr_input == "paper" and cmp_input =="scissors"):
+            print ("Computer Wins!")
+            
+        elif (usr_input == "scissors" and cmp_input =="paper") or (usr_input == "rock" and cmp_input =="scissors") or (usr_input == "paper" and cmp_input =="rock"):
+            print ("User Wins!")
+    else:
+        print("Thank You for Playing!")
