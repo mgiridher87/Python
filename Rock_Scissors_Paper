@@ -5,14 +5,15 @@ while True:
     usr_input=usr_input_tmp.lower()
     cmp_input=random.choice( ['scissors', 'rock', 'paper'] )
     print("Computer Choice : " + cmp_input)
-    if usr_input != "quit":
+    if usr_input == "quit":
+        break
+    while usr_input != "quit":
         if usr_input==cmp_input:
             print ("Same Pinch! Please enter your choice again")
-            
+            break
         elif (usr_input == "scissors" and cmp_input =="rock") or (usr_input == "rock" and cmp_input =="paper") or (usr_input == "paper" and cmp_input =="scissors"):
             print ("Computer Wins!")
-            
+            break
         elif (usr_input == "scissors" and cmp_input =="paper") or (usr_input == "rock" and cmp_input =="scissors") or (usr_input == "paper" and cmp_input =="rock"):
             print ("User Wins!")
-    else:
-        print("Thank You for Playing!")
+            break
