@@ -1,0 +1,24 @@
+import random
+chk=True
+cnt=1
+cmp_num=random.randint(1,10)
+print (cmp_num)
+while chk==True:
+    usr_inp1=input("Enter 1.Number or 2.Quit : ")
+    if usr_inp1!= 'quit':
+        usr_inp=int(usr_inp1)
+        if usr_inp < 1 or usr_inp > 10:
+            print ("Entered number is invalid, so do enter it again!")
+        if cmp_num == usr_inp:
+            print ("Matching now!")
+            print ("You have guessed in {} chances".format(cnt))
+            chk=False
+        elif cmp_num > usr_inp and usr_inp >=1 and usr_inp <=10:
+            print ("Higher")
+        elif cmp_num < usr_inp and usr_inp >=1 and usr_inp <=10:
+            print("Lower")
+        cnt=cnt+1
+        #print (cnt)
+    else:
+        chk=False
+        print("Thank You for Playing")  
